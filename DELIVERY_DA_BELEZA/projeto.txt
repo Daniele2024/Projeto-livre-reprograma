@@ -1,0 +1,69 @@
+### **Problema**
+
+Qual o problema que você quer resolver? 
+Meu projeto vai ser baseado na alta taxa de desemprego e alta taxa de autonomos disponivel no mercado de trabalho atualmente , 
+principalmente desde inicio da Pandemia no Brasil as taxas de desemprego aumentaram e foi necessario a toda populaçao se reinventar.
+
+
+Números/dados que comprovem o seu problema
+Trabalhador autônomo e sem carteira ganham espaço. Desemprego cai, mas renda despenca
+Segundo o IBGE, informalidade supera os 40% da mão de obra. Rendimento médio cai 11% em um ano.
+ref https://www.redebrasilatual.com.br/economia/2021/11/desemprego-renda-trabalhador-autonomo/
+
+Quem sofre esse problema? (gênero, classe social, renda, cor)
+
+Toda a populaçao , pois com a pandemia , todos setores foram afetados
+
+Qual o nicho?
+Meu publico alvo seria , mulheres e pessoas que trabalhe na area da beleza.
+
+Como eles estão resolvendo o seu problema hoje?
+
+Para que nao falte suas necessidades basicas ,  na atualidade muitas pessoas exercem muitas atividades de forma autonoma
+
+Como eu posso resolver isso com tecnologia?
+tenho observado mesmo em minha cidade de Salvador e aqui mesmo no Bairro vi  uma necessidade de fazer uma Api que possa proporcionar uma 
+relaçao de profissional e clientes ,meu foco mesmo na area de Beleza , pois ainda é uma area com grande demanda
+
+
+
+### **Solução**
+
+Define em uma frase sua solução
+Uma aplicação aonde os autonomos de cadastram para ofertar serviços de beleza em um delivery de Beleza , atendimento em domicilio
+
+Qual a diferença da minha solução do que já existe?  ainda nao conheço aplicativo que forneça esse serviço
+
+A minha solução é melhor do que já existe?
+
+Qual o mínimo que consigo entregar com o mínimo esforço e com qualidade satisfatória? (MVP - Mínimo Produto Viável)
+
+
+
+### Implementações futuras
+
+Construção do frontend
+
+Novas funcionalidades/ Novas regras
+
+
+
+### Apresentação
+
+Canva para template
+
+Guia e cronometragem de tempo (3 minutos totais)
+
+Apresentação do problema (30s)
+
+Proposta de solução (15-30s)
+
+Consolidação da solução técnica 
+
+Código funcionando (: (vídeo, gif, rotas disponíveis no postman)
+
+Implementações futuras (15-30s)
+
+### Mínimo técnico
+
+CRUD + MongoDB
