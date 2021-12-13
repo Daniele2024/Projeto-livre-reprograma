@@ -1,8 +1,6 @@
 const mongoose = require('mongoose');
 
 
-
-
 const parceiroSchema = new mongoose.Schema({
 
    aceitoTermoDeUsoDeDados : {
@@ -19,10 +17,7 @@ const parceiroSchema = new mongoose.Schema({
     Profissão:{ type: String },
     serviço: { type: String },
 
-   // serviços: [{
-    //    descricao: {type: String},
-  //      valor: {type: Number}
-    //  }]
+ 
     
     password: { type: String },
     
