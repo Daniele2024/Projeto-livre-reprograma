@@ -6,20 +6,17 @@ const dotenv = require('dotenv')
 const database = require('./database/config')
 
 const app = express()
+//a inicialização do banco tem que ficar bem no início do código!
+database.connect()
+
 app.use(cors())
 app.use(express.json())
 
-const parceiros = require('./routes/parceirosRoutes')
-const clientes = require('./routes/clientesRoutes')
-
+const parceirosRotas = require('./routes/parceirosRoutes')
 
 //rota principal
-app.use('/', parceiros)
-app.use('/clientes', clientes)
+app.use('/', parceirosRotas)
 
 dotenv.config()
-
-
-database.connect()
 
 module.exports = app

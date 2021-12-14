@@ -1,15 +1,13 @@
 const mongoose = require('mongoose');
 
-
 const parceiroSchema = new mongoose.Schema({
-
    aceitoTermoDeUsoDeDados : {
         type: Boolean,
         default: false
     },
     nome: { type: String },
     cpf: {
-        type: Number,
+        type: String, // atenção! CPF nunca é tipo número, sempre string (:
         required: true
     },
     email: { type: String },
