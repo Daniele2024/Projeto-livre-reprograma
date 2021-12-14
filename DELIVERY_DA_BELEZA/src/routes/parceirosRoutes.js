@@ -2,10 +2,10 @@ const express = require("express")
 const router = express.Router()
 const controller = require("../controllers/parceirosController")
 
-router.get("/all", controller.getAll )
-router.post("/criar",controller.cadastrar)
-router.put("/atualizar/:id", controller.atualizar)
-router.delete("/delete/:id",controller.deleteParceiroId )
-
+router.get("/listarTodos", controller.listarTodosParceiros)
+router.get("/filtrar", controller.filtrarParceiros)
+router.post("/criar",controller.cadastrarParceiros)
+router.put("/atualizar/:id", controller.atualizarParceiros)
+router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 module.exports = router;

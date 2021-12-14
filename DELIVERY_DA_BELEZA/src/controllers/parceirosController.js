@@ -1,66 +1,89 @@
 //importando
-const parceiros = require("../models/parceirosModels")
+const Parceiros = require("../models/parceirosModels") // geralmente o nome da variável do models ou schema fica em maiúsculo
 const SECRET = process.env.SECRET;
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const {hashPassword} =require('../helpers/auth')
+const {
+    hashPassword
+} = require('../middlewares/auth')
 
 
-const getAll = async(req, res) => {
-
-  try{
-    const parceiro = await parceiros.find()
-    
-    res.status(200).json({messagem:"Lista de profissionais", parceiro})
-   
-}   catch (error){
-    res.status(500).json({
-        message: error.message
-    })
-}
-};
-
-const cadastrar = async (req,res) =>{
-    const body = req.body
-    
-    try{
-        if( body.aceitoTermoDeUsoDeDados == false ){
-            return res.status(401).json({
-           
-             message: "Os termos não foram aceitos , cadastro nao autorizado"
-            })
-    }
-        
-        const novoCadastro = new parceiros({
-            
-           aceitoTermoDeUsoDeDados : body.aceitoTermoDeUsoDeDados,
-            nome: body.name,
-            cpf:body.cpf,
-            email: body.email,
-            telefone:body.telefone,
-            profissão:body.profissão,
-            serviço:body.serviço,
-           valorServiço:body.valorServiço,
-            password:body.password
+const listarTodosParceiros = async (req, res) => {
+    try {
+        const parceiro = await Parceiros.find()
+        res.status(200).json({
+            messagem: "Lista de profissionais",
+            parceiro
         })
-        const passwordHashed = await hashPassword(novoCadastro.password,res)
-        novoCadastro.password=passwordHashed
-        
+
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+}
+
+const filtrarParceiros = async (req, res) => {
+    const {
+        nome,
+        profisão,
+        serviço,
+        valorServiço,
+        telefone
+    } = req.query
+
+    try {
+        const filtrados = await Parceiros.find().select('-password -cpf -aceitoTermoDeUsoDeDados')
+
+        return res.status(200).send(filtrados);
+    } catch (error) {
+        res.status(500).json({
+            message: error.message
+        })
+    }
+}
+
+const cadastrarParceiros = async (req, res) => {
+    const body = req.body
+
+    try {
+        if (body.aceitoTermoDeUsoDeDados == false) {
+            return res.status(401).json({
+
+                message: "Os termos não foram aceitos , cadastro nao autorizado"
+            })
+        }
+
+        const novoCadastro = new Parceiros({
+
+            aceitoTermoDeUsoDeDados: body.aceitoTermoDeUsoDeDados,
+            nome: body.name,
+            cpf: body.cpf,
+            email: body.email,
+            telefone: body.telefone,
+            profissão: body.profissão,
+            serviço: body.serviço,
+            valorServiço: body.valorServiço,
+            password: body.password
+        })
+        const passwordHashed = await hashPassword(novoCadastro.password, res)
+        novoCadastro.password = passwordHashed
+
         const cadastroConcluido = await novoCadastro.save()
         res.status(201).json({
-            novoCadastro:cadastroConcluido ,
+            novoCadastro: cadastroConcluido,
         })
-    
-    } catch(error) {
+
+    } catch (error) {
         res.status(400).json({
             mensagem: error.message,
         })
     }
 }
 
-const atualizar = async (req, res) => {
+const atualizarParceiros = async (req, res) => {
     try {
-        const parceiroEncontrado = await parceiros.findById(req.params.id)
+        const parceiroEncontrado = await Parceiros.findById(req.params.id)
 
         if (parceiroEncontrado) {
 
@@ -74,8 +97,8 @@ const atualizar = async (req, res) => {
             parceiroEncontrado.valorServiço = req.body.valorServiço || parceiroEncontrado.valorServiço
             parceiroEncontrado.password = req.body.password || parceiroEncontrado.password
 
-            const passwordHashed = await hashPassword(parceiroEncontrado.password,res)
-            parceiroEncontrado.password=passwordHashed
+            const passwordHashed = await hashPassword(parceiroEncontrado.password, res)
+            parceiroEncontrado.password = passwordHashed
 
             const parceiroSalvo = await parceiroEncontrado.save()
             res.status(200).json({
@@ -92,15 +115,16 @@ const atualizar = async (req, res) => {
         })
     }
 }
-const deleteParceiroId = async (req, res) => {
+
+const deletarParceiroPorId = async (req, res) => {
     try {
-        const parceiroEncontrado = await parceiros.findById(req.params.id)
+        const parceiroEncontrado = await Parceiros.findById(req.params.id)
 
-       await parceiroEncontrado.delete()
+        await parceiroEncontrado.delete()
 
-       res.status(200).json({
-           mensagem: `cadastro de  '${parceiroEncontrado.nome}' deletado com sucesso!`
-       })
+        res.status(200).json({
+            mensagem: `cadastro de  '${parceiroEncontrado.nome}' deletado com sucesso!`
+        })
 
     } catch (error) {
         res.status(400).json({
@@ -109,9 +133,10 @@ const deleteParceiroId = async (req, res) => {
     }
 }
 
-module.exports=
-{    getAll,
-    cadastrar,
-    atualizar,
-    deleteParceiroId
+module.exports = {
+    listarTodosParceiros,
+    filtrarParceiros,
+    cadastrarParceiros,
+    atualizarParceiros,
+    deletarParceiroPorId
 }
