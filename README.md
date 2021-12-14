@@ -13,7 +13,7 @@ API - DELIVERY DA BELEZA
    mais uma vez a população precisa se reinventar e estão atuando de forma autonoma para ajuda na propria sobrevivência.<br>
 
    >
-   >Pensando nisso desenvolvi esse projeto delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para cadastrar seus serviços , ajudando na divulgação fazendo uma relaçao de forma facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de achar e contactar profissionais da beleza.
+   >Pensando nisso desenvolvi esse projeto delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para cadastrar seus serviços , ajudando na divulgação fazendo uma relaçao de forma mais facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de achar e contactar profissionais da beleza para um atendimento personalizado em domicilio.
 
 h
 # Sumário
@@ -49,31 +49,39 @@ O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRI
         Arquitetura MVC
         |
         \--📂PROJETO-LIVRE-REPROGRAMA
-            |    
+            | 📂DELIVERY_DA_BELEZA   
             |   
             \--📂src
                 |
                 📂---controller
                 |       
-                |       filmesController.js
+                |   .parceirosController.js
                 |
                 📂--database
-                |    .mongoConfig.js   
+                |    .config.js   
                 |
-                📂---model
+                📂--helpers
+                |
+                |  .auth.js
+                |
+                📂---models
                 |       
-                |     .filmes.json  
-                |     .filmeSchema.js
+                |     .parceirosModels.js  
+                |     
                 |       
                 📂---routes
                 |      
-                |       filmestoRoutes.js**
+                |     .parceirosRoutes.js
+                |
+                | .app.js
+                | .projeto.txt
+                | .node_modules
                 |.env
                 |.env.example
-                | *app.js
+                | .gitignore
                 |*package-lock.json
                 |*package.json
-                |
+                |.procfile
                 |*README.md
                 |*server.js
                 |
@@ -89,7 +97,7 @@ O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRI
 
 Você precisa ter instalado em sua máquina as seguintes ferramentas:
 [Git](https://git-scm.com), [Node.js](https://nodejs.org/en/) e o database NoSQL [mongo Atlas](https://www.mongodb.com/pt-br/cloud/atlas/register)
-E claro o bom e velho editor de código como [VSCode](https://code.visualstudio.com/)
+E claro o bom e velho editor de código como [VSCode](https://code.visualstudio.com/);
 
 ### 👩‍👧‍👦Rodando o Back End 
 
@@ -199,7 +207,7 @@ Funcionalidades da aplicação
 
 # Agradecimentos
 
-<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar  a minha familia , meu esposo Kaio , meu irmão Gilson a todo apoio para nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp a cada dia aprendendo e amando a area de tecnologia , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 . <br>
+<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar  a minha familia , meu esposo Kaio , meu irmão Gilson , meu filho kaique  que é minha inspiraçao de mudança de vida e todo apoio para nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp , cada dia aprendendo e amando a area de tecnologia , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 . <br>
 E a Tassila que me apresentou esse curso  e a Reprograma , obrigada por partilhar a experiencia e me envolver com todo esse projeto de transição de carreira , o que possibilitou a chegar ate aqui , obrigada Tay<br>
 
 Deus é a minha fortaleza e com ele tudo posso , ate mesmo programar o mundo!</p>

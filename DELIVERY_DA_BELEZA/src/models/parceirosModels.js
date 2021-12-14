@@ -7,17 +7,20 @@ const parceiroSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    name: { type: String },
+    nome: { type: String },
     cpf: {
         type: Number,
         required: true
     },
     email: { type: String },
+
     telefone:{ type: String },
-    Profissão:{ type: String },
+
+    profissão:{ type: String },
+
     serviço: { type: String },
 
- 
+    valorServiço:{type: String},
     
     password: { type: String },
     

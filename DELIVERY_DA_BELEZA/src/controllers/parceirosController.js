@@ -5,6 +5,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const {hashPassword} =require('../helpers/auth')
 
+
 const getAll = async(req, res) => {
 
   try{
@@ -23,6 +24,13 @@ const cadastrar = async (req,res) =>{
     const body = req.body
     
     try{
+        if( body.aceitoTermoDeUsoDeDados == false ){
+            return res.status(401).json({
+           
+             message: "Os termos não foram aceitos , cadastro nao autorizado"
+            })
+    }
+        
         const novoCadastro = new parceiros({
             
            aceitoTermoDeUsoDeDados : body.aceitoTermoDeUsoDeDados,
@@ -30,7 +38,7 @@ const cadastrar = async (req,res) =>{
             cpf:body.cpf,
             email: body.email,
             telefone:body.telefone,
-            profissão:body.Profissão,
+            profissão:body.profissão,
             serviço:body.serviço,
            valorServiço:body.valorServiço,
             password:body.password
@@ -61,7 +69,7 @@ const atualizar = async (req, res) => {
             parceiroEncontrado.cpf = req.body.cpf || parceiroEncontrado.cpf
             parceiroEncontrado.email = req.body.email || parceiroEncontrado.email
             parceiroEncontrado.telefone = req.body.telefone || parceiroEncontrado.telefone
-            parceiroEncontrado.Profissão = req.body.Profissão || parceiroEncontrado.Profissão
+            parceiroEncontrado.profissão = req.body.profissão || parceiroEncontrado.profissão
             parceiroEncontrado.serviço = req.body.serviço || parceiroEncontrado.serviço
             parceiroEncontrado.valorServiço = req.body.valorServiço || parceiroEncontrado.valorServiço
             parceiroEncontrado.password = req.body.password || parceiroEncontrado.password
@@ -102,7 +110,7 @@ const deleteParceiroId = async (req, res) => {
 }
 
 module.exports=
-{getAll,
+{    getAll,
     cadastrar,
     atualizar,
     deleteParceiroId

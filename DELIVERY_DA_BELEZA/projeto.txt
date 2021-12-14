@@ -15,13 +15,14 @@ Quem sofre esse problema? (gênero, classe social, renda, cor)
 Toda a populaçao , pois com a pandemia , todos setores foram afetados
 
 Qual o nicho?
-Meu publico alvo seria , mulheres e pessoas que trabalhe na area da beleza.
+Meu publico alvo seria  pessoas que atue na area da beleza, com objetivo de relacionar profissional a clientes que precisam desse serviço em casa.
 
 Como eles estão resolvendo o seu problema hoje?
 
 Para que nao falte suas necessidades basicas ,  na atualidade muitas pessoas exercem muitas atividades de forma autonoma
 
 Como eu posso resolver isso com tecnologia?
+
 tenho observado mesmo em minha cidade de Salvador e aqui mesmo no Bairro vi  uma necessidade de fazer uma Api que possa proporcionar uma 
 relaçao de profissional e clientes ,meu foco mesmo na area de Beleza , pois ainda é uma area com grande demanda
 
@@ -30,15 +31,17 @@ relaçao de profissional e clientes ,meu foco mesmo na area de Beleza , pois ain
 ### **Solução**
 
 Define em uma frase sua solução
+
 Uma aplicação aonde os autonomos de cadastram para ofertar serviços de beleza em um delivery de Beleza , atendimento em domicilio
 
 Qual a diferença da minha solução do que já existe?  ainda nao conheço aplicativo que forneça esse serviço
 
 A minha solução é melhor do que já existe?
+No momento sim.
 
 Qual o mínimo que consigo entregar com o mínimo esforço e com qualidade satisfatória? (MVP - Mínimo Produto Viável)
 
-
+o cadastramento de profissionais aqui tratados como parceiros e a interaçao com clientes
 
 ### Implementações futuras
 
