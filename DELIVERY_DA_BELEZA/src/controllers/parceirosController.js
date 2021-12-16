@@ -133,10 +133,40 @@ const deletarParceiroPorId = async (req, res) => {
     }
 }
 
+
+const login = async(req,res) => {
+    const { email, password} = req.body;
+  try {
+      const user = await User.findOne({ email: email})
+
+  if(!user){
+      return res.status(422).send({message: "Email nao encontrado."})
+
+  }
+const checkPassword = await bcrypt.compare(password, user.password)
+
+ if (!checkPassword) {
+   return  res.status(422).send({ message: "Senha incorreta."})
+      }
+      const secret = process.env.SECRET;
+
+      const token = jwt.sign({ id: user._id  }, secret)
+
+      res.status(200).json({
+          message: "Token deu bom",
+          token
+      })
+   } catch (error){
+          res.status(500).json({
+              message: error.message
+          })
+      } };
+
 module.exports = {
     listarTodosParceiros,
     filtrarParceiros,
     cadastrarParceiros,
     atualizarParceiros,
-    deletarParceiroPorId
+    deletarParceiroPorId,
+    login
 }

@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 
 const parceiroSchema = new mongoose.Schema({
+    
    aceitoTermoDeUsoDeDados : {
         type: Boolean,
         default: false

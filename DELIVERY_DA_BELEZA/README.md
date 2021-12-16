@@ -9,11 +9,10 @@ API - DELIVERY DA BELEZA
 
 
 
-   >Com o inicio da Pandemia as taxas de desemprego no País aumentaram ainda mais , e muitas pessoas estão em casa desempregadas ,
-   mais uma vez a população precisa se reinventar e estão atuando de forma autonoma para ajuda na propria sobrevivência.<br>
+   >Com as altas taxas de desemprego e o inicio da Pandemia e uma crise financeira geral , e muitas pessoas estão em casa desempregadas , mais uma vez a população precisa se reinventar e estão atuando de forma autonoma para ajuda na propria sobrevivência.<br>
 
    >
-   >Pensando nisso desenvolvi esse projeto delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para cadastrar seus serviços , ajudando na divulgação fazendo uma relaçao de forma mais facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de achar e contactar profissionais da beleza para um atendimento personalizado em domicilio.
+   >Pensando nisso desenvolvi esse projeto delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para cadastrar seus serviços , ajudando na divulgação fazendo uma relaçao de forma mais facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de achar e contactar profissionais da área de beleza para um atendimento personalizado em domicilio.
 
 h
 # Sumário
@@ -37,7 +36,7 @@ h
 - Cadastro de profissionais da beleza e seus serviços disponiveis;
 - Busca de serviços para clientes interessados;
 - Atualizaçao de dados de profissionais em relaçao aos serviços disponiveis ;
-- Delete seria a exclusão de cadastro de profissional;
+- Delete seria a exclusão desse cadastro ;
 
 
 ## ✅Aprendizados
@@ -48,8 +47,8 @@ O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRI
 
         Arquitetura MVC
         |
-        \--📂PROJETO-LIVRE-REPROGRAMA
-            | 📂DELIVERY_DA_BELEZA   
+        \--📂DELIVERY_DA_BELEZA
+            | .node modules  
             |   
             \--📂src
                 |
@@ -60,7 +59,7 @@ O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRI
                 📂--database
                 |    .config.js   
                 |
-                📂--helpers
+                📂--middlewares
                 |
                 |  .auth.js
                 |
@@ -74,14 +73,13 @@ O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRI
                 |     .parceirosRoutes.js
                 |
                 | .app.js
-                | .projeto.txt
-                | .node_modules
                 |.env
                 |.env.example
                 | .gitignore
                 |*package-lock.json
                 |*package.json
                 |.procfile
+                | .projeto.txt
                 |*README.md
                 |*server.js
                 |
@@ -109,17 +107,20 @@ Server Local
 $ git clone <git@github.git>
 
 # Acesse a pasta do projeto no terminal/cmd
-$ cd Projeto-livre-reprograma
+$ cd DELIVERY_DA_BELEZA
 
 # Instale as dependências
+$ npm init -y
+$ npm express
+$ npm nodemon
 $ npm install
 $ npm instal mongoose
 
 # Execute o servidor
 $ npm start
 
-# O servidor inciará na porta:33 - acesse <http://localhost:3000>
-# Mongo conectado em mongodb://localhost:27017/forkids
+# O servidor inciará na porta:33 - acesse <http://localhost:1988>
+
 ```
 * Modifique `.env` para receber as variáveis de ambiente e substitua para que seu servidor funcione adequadamente
 
@@ -142,72 +143,78 @@ Para a consturição do projeto, as seguintes tecnologiasforam utilizadas:
 - [cors](https://www.npmjs.com/package/cors)
 - [heroku](https://dashboard.heroku.com/apps)
 
-### 👩‍👧‍👦Features
+### 👩‍👧‍👦Recursos
 
 Funcionalidades da aplicação
 
-- [x] Cadastros do estabelecimento - POST
-- [x] Comentario - POST
-- [x] Like ou deslike - POST
-- [x] Busca - GET
-- [x] Busca por Categoria, estado e cidade - GET
+- [x] Cadastros do parceiros - POST
+- [x] Busca - GET - lista de todos cadastrados e seus dados
+- [x] Busca - Get filtrar -filtro para o cliente , lista de profissionais e seus serviços
 - [x] Atualização em todos os campos - PUT
 - [x] Apagar - DELETE
 
 ### 👩‍👧‍👦Rotas
 
-* local: http://localhost:
+* local: http://localhost:1988
+
+rota principal  ('/',)
+
+//rota para visualizar toda lista de cadastro 
+router.get("/listarTodos", controller.listarTodosParceiros)
+
+//rota para visão cliente com dados do profissional e seus serviços
+router.get("/filtrar", controller.filtrarParceiros)
+
+//rota para cadastro do profissional
+router.post("/criar",controller.cadastrarParceiros)
+
+//rota para atualizaçao do cadastro
+router.put("/atualizar/:id", controller.atualizarParceiros)
+
+//rota para exclusão do cadastro
+router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 
 
-#### Retorna teste com apresentação 
-{ mensagem: O app está rodando em http://localhost:3000 }
-- [x] "/estabelecimentos" 
-
-#### Cria novo cadastro de estabelecimento
-- [x] "/estabelecimentos" 
-
-#### Retorna estabelecimento por um id específico
-- [x] "/:Id" 
-
-#### Deleta cadastro do estabelecimento
-- [x] "/estabelecimentos/[ID]" 
 
 
-#### Dar um like em um estabelecimento
-- [x] "/estabelecimentos/[ID]/like" 
+## ✅Modelo com campos obrigatórios para teste no postman
 
-#### Atualiza o cadastro de um estabelecimento (id não pode ser modificado)
-- [x] "/estabelecimento/[ID]"
-
-
-## ✅Modelo com campos obrigatórios para teste
-
-### 👩‍👧‍👦 Estabelecimentos
+### 👩‍👧‍👦 post / cadastro de profissional 
 
 {
-    "nome": "Bar do Juarez", 
-    "site": "http://www.estabelecimento1.com.br",
-    "categoria": "restaurante",
-    "logradouro": "Rua Hum",
-    "numero": 2,
-    "bairro": "centro",
-    "cidade": "Jundiaí",
-    "estado": "sp"
+   aceitoTermoDeUsoDeDados : type: Boolean,
+    
+    nome: type: String 
+
+    cpf:  type: String
+
+    email:  type: String
+
+    telefone: type: String 
+
+    profissão:type: String 
+
+    serviço: type: String 
+
+    valorServiço:type: String
+    
+    password: type: String
 }
 
 
-### 🚧 Projeto em Construção
+### 🚧 Implementaçoes futuras
 
-        Autenticação
-        Sistema de Login
-        Ranking
+      *  a possibilidade de incluir no cadastro do profissional um catalogo de serviço 
+      *  a possibilidade do cliente realizar um agendamento de forma  on line na plataforma
+      
+        
         
 
 
 # Agradecimentos
 
-<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar  a minha familia , meu esposo Kaio , meu irmão Gilson , meu filho kaique  que é minha inspiraçao de mudança de vida e todo apoio para nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp , cada dia aprendendo e amando a area de tecnologia , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 . <br>
+<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar pois foi um desafio muito grande o conhecimento de uma nova limguagem de programação , agradeço muito a minha familia , meu esposo Kaio , meu irmão Gilson , meu filho kaique  que é minha inspiraçao de mudança de vida e todo apoio que tive para  nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp , cada dia aprendendo e amando a area de tecnologia , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 . <br>
 E a Tassila que me apresentou esse curso  e a Reprograma , obrigada por partilhar a experiencia e me envolver com todo esse projeto de transição de carreira , o que possibilitou a chegar ate aqui , obrigada Tay<br>
 
 Deus é a minha fortaleza e com ele tudo posso , ate mesmo programar o mundo!</p>

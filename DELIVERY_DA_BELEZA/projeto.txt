@@ -32,7 +32,7 @@ relaçao de profissional e clientes ,meu foco mesmo na area de Beleza , pois ain
 
 Define em uma frase sua solução
 
-Uma aplicação aonde os autonomos de cadastram para ofertar serviços de beleza em um delivery de Beleza , atendimento em domicilio
+Uma aplicação aonde os autonomos possam se cadastram para ofertar seus serviços de beleza em um  atendimento em domicilio.
 
 Qual a diferença da minha solução do que já existe?  ainda nao conheço aplicativo que forneça esse serviço
 
