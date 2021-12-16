@@ -1,5 +1,7 @@
+## Turma Online 14 - Todas em Tech | Back-end | 2021 |
+
 # Projeto-livre-reprograma
-MEU PROJETO FINAL DA REPROGRAMA
+Óla , sejam bem vindo ao meu primeiro projeto livre da Reprograma turma on 14 -2021 , espero tratar com muita clareza para que voces possam entender cada detalhe .
 
 
 
@@ -9,10 +11,10 @@ API - DELIVERY DA BELEZA
 
 
 
-   >Com as altas taxas de desemprego e o inicio da Pandemia e uma crise financeira geral , e muitas pessoas estão em casa desempregadas , mais uma vez a população precisa se reinventar e estão atuando de forma autonoma para ajuda na propria sobrevivência.<br>
+   >Devido a grande alta de desemprego no pais principalmente após inicio da pandemia , estudos mostram um aumento na taxa de autônomos no mercado de trabalho , visto que muitas pessoas estão em casa desempregadas , mais uma vez a população precisa se reinventar e estão atuando de forma autonoma para ajuda na propria sobrevivência.<br>
 
    >
-   >Pensando nisso desenvolvi esse projeto delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para cadastrar seus serviços , ajudando na divulgação fazendo uma relaçao de forma mais facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de achar e contactar profissionais da área de beleza para um atendimento personalizado em domicilio.
+   >Pensando nisso desenvolvi esse projeto delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para cadastrar seus serviços , ajudando na divulgação e fazendo uma relaçao de forma mais facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de encontrar e contactar profissionais da área de beleza para um atendimento personalizado em domicilio.
 
 h
 # Sumário
@@ -104,7 +106,7 @@ Server Local
 ```bash
 # Com o git
 # Clone este repositório
-$ git clone <git@github.git>
+$ git clone <https://github.com/Daniele2024/Projeto-livre-reprograma>
 
 # Acesse a pasta do projeto no terminal/cmd
 $ cd DELIVERY_DA_BELEZA
@@ -119,12 +121,12 @@ $ npm instal mongoose
 # Execute o servidor
 $ npm start
 
-# O servidor inciará na porta:33 - acesse <http://localhost:1988>
+# O servidor inciará na porta:1988 - acesse <http://localhost:1988>
 
 ```
 * Modifique `.env` para receber as variáveis de ambiente e substitua para que seu servidor funcione adequadamente
 
-Para acessar via Heroku, acesse o [link da API](https:///)
+Para acessar via Heroku, acesse o [link da API FILTRAR]<https://deliverydabeleza-reprograma-21.herokuapp.com/filtrar>
 
 * Utilize o [Postman](https://www.postman.com/) ou [Insomnia](https://insomnia.rest/download/) para para chamar e testar os endpoints da API localmente ou via Heroku
 
