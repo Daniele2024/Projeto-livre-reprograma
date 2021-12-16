@@ -9,11 +9,10 @@ router.get("/listarTodos", controller.listarTodosParceiros)
 //rota para visão cliente com dados do profissional e seus serviços
 router.get("/filtrar", controller.filtrarParceiros)
 
+
 //rota para cadastro do profissional
 router.post("/criar",controller.cadastrarParceiros)
 
-//rota para cadastro de login
-router.post("/login" ,controller.login )
 
 //rota para atualizaçao do cadastro
 router.put("/atualizar/:id", controller.atualizarParceiros)
