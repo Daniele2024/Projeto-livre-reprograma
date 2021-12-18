@@ -1,7 +1,7 @@
 ### **Problema**
 
 Qual o problema que você quer resolver? 
-Meu projeto vai ser baseado na alta taxa de desemprego e alta taxa de autonomos disponivel no mercado de trabalho atualmente , 
+Meu projeto vai ser baseado na alta taxa de desemprego e aumento de autonomos disponivel no mercado de trabalho atualmente , 
 principalmente desde inicio da Pandemia no Brasil as taxas de desemprego aumentaram e foi necessario a toda populaçao se reinventar.
 
 
@@ -32,7 +32,7 @@ relaçao de profissional e clientes ,meu foco mesmo na area de Beleza , pois ain
 
 Define em uma frase sua solução
 
-Uma aplicação aonde os autonomos possam se cadastram para ofertar seus serviços de beleza em um  atendimento em domicilio.
+Uma aplicação aonde os autonomos possam se cadastram para ofertar seus serviços de beleza em um  atendimento em domicilio , facilitando acesso a novos cliente
 
 Qual a diferença da minha solução do que já existe?  ainda nao conheço aplicativo que forneça esse serviço
 

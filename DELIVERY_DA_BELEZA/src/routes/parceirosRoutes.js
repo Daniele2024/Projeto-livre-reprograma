@@ -4,14 +4,14 @@ const controller = require("../controllers/parceirosController")
 
 
 //rota para visualizar toda lista de cadastro 
-router.get("/listarTodos", controller.listarTodosParceiros)
+router.get("/listarTodosdados", controller.listarTodosParceiros)
 
 //rota para visão cliente com dados do profissional e seus serviços
-router.get("/filtrar", controller.filtrarParceiros)
+router.get("/filtroCliente", controller.filtrarParceiros)
 
 
 //rota para cadastro do profissional
-router.post("/criar",controller.cadastrarParceiros)
+router.post("/cadastro",controller.cadastrarParceiros)
 
 
 //rota para atualizaçao do cadastro

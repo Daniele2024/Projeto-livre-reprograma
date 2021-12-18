@@ -1,22 +1,28 @@
 ## Turma Online 14 - Todas em Tech | Back-end | 2021 |
 
 # Projeto-livre-reprograma
-Óla , sejam bem vindo ao meu primeiro projeto livre da Reprograma turma on 14 -2021 , espero tratar com muita clareza para que voces possam entender cada detalhe .
+Óla , sejam bem vindo ao meu primeiro projeto livre , espero tratar com muita clareza para que voces possam entender cada detalhe que foi produzido com muito amor.
 
 
 
-API - DELIVERY DA BELEZA
+# Nome do Projeto  - DELIVERY DA BELEZA 
+
+### Tema : Fique linda no conforto de sua casa.
+
+
 ## 🚀 Descrição
 
 
 
 
-   >Devido a grande alta de desemprego no pais principalmente após inicio da pandemia , estudos mostram um aumento na taxa de autônomos no mercado de trabalho , visto que muitas pessoas estão em casa desempregadas , mais uma vez a população precisa se reinventar e estão atuando de forma autonoma para ajuda na propria sobrevivência.<br>
+   >Devido a grande alta de desemprego no pais principalmente após inicio da pandemia , estudos mostram um aumento na taxa de autônomos no mercado de trabalho , visto que muitas pessoas estão em casa desempregadas , mais uma vez a população precisa se reinventar e estão atuando no mercado de trabalho de forma informal , para sua propria sobrevivência.<br>
 
    >
-   >Pensando nisso desenvolvi esse projeto delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para cadastrar seus serviços , ajudando na divulgação e fazendo uma relaçao de forma mais facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de encontrar e contactar profissionais da área de beleza para um atendimento personalizado em domicilio.
+   >Pensando nisso desenvolvi esse projeto Delivery da beleza ,onde os profissionais  da area da beleza e autonomos podem encontrar uma plataforma para se  cadastrar , ajudando na divulgação de seus serviços  e fazendo uma relaçao de forma mais facil para acesso a clientes novos , por outro lado tambem temos os clientes que com essa plataforma teria a facilidade de encontrar e contactar profissionais da área de beleza para um atendimento personalizado em domicilio.
 
-h
+  >Fonte de pesquisa : (https://www.jornalcontabil.com.br/numero-de-trabalhadores-autonomos-bateu-recorde-no-segundo-trimestre-de-2021/)
+  >Fonte de pesquisa : (https://g1.globo.com/economia/noticia/2021/11/22/brasil-tem-a-4a-maior-taxa-de-desemprego-do-mundo-aponta-ranking-com-44-paises.ghtml)
+
 # Sumário
 =================
 <!--ts-->
@@ -50,6 +56,8 @@ O projeto final consiste em uma API fundamentada no CRUD, que são:  CREATE (CRI
         Arquitetura MVC
         |
         \--📂DELIVERY_DA_BELEZA
+            | .assets
+            |
             | .node modules  
             |   
             \--📂src
@@ -182,7 +190,7 @@ router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 ## ✅Modelo com campos obrigatórios para teste no postman
 
-### 👩‍👧‍👦 post / cadastro de profissional 
+### 👩 post / cadastro de profissional 
 
 {
    aceitoTermoDeUsoDeDados : type: Boolean,
@@ -207,8 +215,8 @@ router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 ### 🚧 Implementaçoes futuras
 
-      *  a possibilidade de incluir no cadastro do profissional um catalogo de serviço 
-      *  a possibilidade do cliente realizar um agendamento de forma  on line na plataforma
+      *  A possibilidade de incluir no cadastro do profissional um catalogo de serviço .
+      *  A possibilidade do cliente realizar um agendamento de forma  on line na plataforma.
       
         
         
@@ -216,7 +224,7 @@ router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 # Agradecimentos
 
-<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar pois foi um desafio muito grande o conhecimento de uma nova limguagem de programação , agradeço muito a minha familia , meu esposo Kaio , meu irmão Gilson , meu filho kaique  que é minha inspiraçao de mudança de vida e todo apoio que tive para  nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp , cada dia aprendendo e amando a area de tecnologia , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 . <br>
+<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar, pois foi um desafio muito grande o conhecimento de uma nova limguagem de programação , agradeço muito a minha familia , meu esposo Kaio , meu irmão Gilson , meu filho kaique  que é minha inspiraçao de mudança de vida e todo apoio que tive para  nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp , cada dia aprendendo e amando a area de tecnologia , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 . <br>
 E a Tassila que me apresentou esse curso  e a Reprograma , obrigada por partilhar a experiencia e me envolver com todo esse projeto de transição de carreira , o que possibilitou a chegar ate aqui , obrigada Tay<br>
 
 Deus é a minha fortaleza e com ele tudo posso , ate mesmo programar o mundo!</p>
