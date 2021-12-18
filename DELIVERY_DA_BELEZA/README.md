@@ -9,6 +9,10 @@
 
 ### Tema : Fique linda no conforto de sua casa.
 
+<h1 align="center">
+  <img src="./assets/Design.png" width="600">
+<p align="center"><p>
+</h1>
 
 ## 🚀 Descrição
 
@@ -165,15 +169,17 @@ Funcionalidades da aplicação
 
 ### 👩‍👧‍👦Rotas
 
+* Heroku link deploy:https://deliverydabeleza-reprograma-21.herokuapp.com/
+
 * local: http://localhost:1988
 
 rota principal  ('/',)
 
 //rota para visualizar toda lista de cadastro 
-router.get("/listarTodos", controller.listarTodosParceiros)
+router.get("listarTodosdados", controller.listarTodosParceiros)
 
 //rota para visão cliente com dados do profissional e seus serviços
-router.get("/filtrar", controller.filtrarParceiros)
+router.get("/filtroCliente", controller.filtrarParceiros)
 
 //rota para cadastro do profissional
 router.post("/criar",controller.cadastrarParceiros)
@@ -224,8 +230,8 @@ router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 # Agradecimentos
 
-<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar, pois foi um desafio muito grande o conhecimento de uma nova limguagem de programação , agradeço muito a minha familia , meu esposo Kaio , meu irmão Gilson , meu filho kaique  que é minha inspiraçao de mudança de vida e todo apoio que tive para  nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp , cada dia aprendendo e amando a area de tecnologia , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 . <br>
-E a Tassila que me apresentou esse curso  e a Reprograma , obrigada por partilhar a experiencia e me envolver com todo esse projeto de transição de carreira , o que possibilitou a chegar ate aqui , obrigada Tay<br>
+<p align="justify">Agradeço primeiramente a Deus pela oportunidade de fazer este curso e me da força para consegui terminar, pois foi um desafio muito grande o conhecimento de uma nova limguagem de programação , agradeço muito a minha familia , meu esposo Kaio , meu irmão Gilson , meu filho kaique  que é minha inspiraçao de mudança de vida e todo apoio que tive para  nunca desistir , tambem a reprograma é claro por ter me selecionado  e pela oportunidade de consegui fazer esse bootcamp  , muito bom todo esse aprendizado e as amizades feitas ,pessoas maravilhosas dessa turma todas  as  professoras , a Raquel nossa facilitadora e Jess nossa cordenadora , e principalmente as alunas e colegas e amigas sempre uma ajudando a outra e assim conseguimos chega ao final , agradeço a todas meninas ta turma ON14 .E a Tassila que me apresentou esse curso  e a Reprograma , obrigada por partilhar a experiencia e me envolver com todo esse projeto de transição de carreira , o que possibilitou a chegar ate aqui , obrigada Tay <br>
+
 
 Deus é a minha fortaleza e com ele tudo posso , ate mesmo programar o mundo!</p>
 
