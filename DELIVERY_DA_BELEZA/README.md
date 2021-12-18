@@ -192,7 +192,7 @@ router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 
 <h1 align="center">
-  <img src="./assets/crud.gif" width="400">
+  <img src="./assets/crud.gif" width="600">
 <p align="center"><p>
 </h1>
 
