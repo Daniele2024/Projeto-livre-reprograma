@@ -10,7 +10,7 @@
 ### Tema : Fique linda no conforto de sua casa.
 
 <h1 align="center">
-  <img src="./assets/Design.png" width="600">
+  <img src="./assets/Design.png" width="400">
 <p align="center"><p>
 </h1>
 
@@ -191,7 +191,10 @@ router.put("/atualizar/:id", controller.atualizarParceiros)
 router.delete("/deletar/:id",controller.deletarParceiroPorId)
 
 
-
+<h1 align="center">
+  <img src="./assets/crud.gif" width="400">
+<p align="center"><p>
+</h1>
 
 
 ## ✅Modelo com campos obrigatórios para teste no postman
